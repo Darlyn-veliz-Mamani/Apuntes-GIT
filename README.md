@@ -26,8 +26,9 @@ git config --global user.name "Adriana"
 
 git config --global user.email "adriana88@gmail.com" 
 
- asi usas tu nombre de tu correo y tu correo  de github  eso basicamente  en resumen 
-#////////=====---------///////----------//////----------////////--------/////////-----#
+ asi usas tu nombre de tu correo y tu correo  de github  eso basicamente  en resumen
+ 
+#//////--------///////----------//////----------////////--------/////////-----#
 
 #clase 2 
 
@@ -76,3 +77,23 @@ git clone enlace del repositorio
 git push 
 y git pull para traer los cambios de develop a tu rama 
 basicamente eso 
+## clase 5
+#Bifurcaciones (ramas) en Git – mis apuntes
+- En Git, una bifurcación o rama es cuando el proyecto se divide en otro camino para poder trabajar sin afectar el principal.
+Sirve para probar cosas nuevas, hacer cambios o avanzar en una parte del trabajo sin arruinar lo que ya funciona.
+
+La rama principal se llama main y ahí va el proyecto que ya está listo o en producción.
+La rama develop se usa para ir probando los cambios antes de pasarlos a main, por eso se considera pre-producción.
+
+Para crear una rama puedo usar git branch, que solo crea la rama, pero no me cambia a ella.
+Si quiero crear la rama y cambiarme de una vez, uso git checkout -b.
+
+Para moverme entre ramas puedo usar git checkout, que es el comando clásico, o git switch
+ que es más nuevo y solo sirve para cambiar de rama.
+
+Cuando ya terminé de usar una rama y no la necesito más, la puedo borrar con git branch -d.
+
+En clase vimos que es mejor trabajar en develop, hacer los cambios ahí con el editor de código 
+(como Visual Studio Code, NetBeans o BlueJ), y cuando todo está bien, unirlo a main.
+
+Este modo de trabajar se conoce como Git Flow, y ayuda a tener el proyecto ordenado y sin errores.
