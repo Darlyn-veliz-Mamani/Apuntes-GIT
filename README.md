@@ -97,7 +97,7 @@ En clase vimos que es mejor trabajar en develop, hacer los cambios ahí con el e
 (como Visual Studio Code, NetBeans o BlueJ), y cuando todo está bien, unirlo a main.
 
 Este modo de trabajar se conoce como Git Flow, y ayuda a tener el proyecto ordenado y sin errores.
-#Clase 6
+##Clase 6
  
 ## Apuntes de Git (ramas, merge y comandos)
 
