@@ -2,8 +2,8 @@
 #TRABAJO INDIVIDUAL-DIA1-
 
 - Nombre: Darlyn Alejandra veliz Mamani
-- Direccion - 
-( en tu corazon bb jjj)
+- NroCel: 77433898
+- Correo: darlinalejandra87@gmail.com
 
 ##Clase1
 # que es GIT ?
@@ -97,3 +97,130 @@ En clase vimos que es mejor trabajar en develop, hacer los cambios ahí con el e
 (como Visual Studio Code, NetBeans o BlueJ), y cuando todo está bien, unirlo a main.
 
 Este modo de trabajar se conoce como Git Flow, y ayuda a tener el proyecto ordenado y sin errores.
+#Clase 6
+ 
+## Apuntes de Git (ramas, merge y comandos)
+
+Hoy vimos cómo trabajar mejor con ramas en Git, especialmente usando `main` y `develop`.
+
+Primero entendí que:
+
+* **main** es la rama principal donde debe estar todo ya funcionando bien (como versión final)
+* **develop** es donde se va trabajando y probando antes de pasar a main
+
+O sea, no se trabaja directo en main, todo pasa primero por develop.
+
+---
+
+Después vimos un comando para ver los commits:
+
+```bash
+git log --graph --oneline --all
+```
+
+Esto sirve para ver todo el historial pero de forma más clara.
+Muestra como un dibujo de las ramas, los commits en una sola línea 
+y todo lo que hay en el proyecto.
+Me ayuda a entender cómo se unieron las ramas y qué cambios hubo.
+
+---
+
+Luego empezamos con el **merge**.
+
+El profe dijo que merge significa **fusionar**, o sea unir ramas.
+Sirve para juntar los cambios de una rama con otra.
+
+---
+
+Para hacer merge primero hizo esto:
+
+```bash
+git checkout develop
+```
+
+Con esto se cambia a la rama develop.
+
+Luego dijo que **ANTES de trabajar o subir cambios siempre hay que hacer esto**:
+
+```bash
+git fetch
+```
+
+Esto trae los cambios del repositorio remoto pero no los mezcla todavía.
+
+Después:
+
+```bash
+git pull origin develop
+```
+
+Esto ya trae los cambios y los mezcla con mi rama develop local.
+O sea, con esto ya estoy actualizado.
+
+---
+
+Después de eso ya se puede hacer merge de otra rama, algo así:
+
+```bash
+git merge nombre-rama
+```
+
+Esto lo que hace es juntar los cambios de esa rama con develop.
+
+---
+
+También vimos cómo borrar una rama:
+
+```bash
+git branch -D nombre-rama
+```
+
+Sirve para eliminar ramas que ya no se necesitan.
+
+---
+
+Luego hablamos de los **conflictos**.
+
+Esto pasa cuando dos ramas modifican lo mismo.
+Entonces Git no sabe cuál cambio dejar.
+
+Para arreglarlo:
+
+1. Se editan los archivos manualmente
+2. Se guarda lo correcto
+3. Luego:
+
+```bash
+git add .
+git commit
+```
+
+El commit puede hacerse sin mensaje, Git abre uno automático.
+
+---
+
+También vimos algunos comandos útiles:
+
+```bash
+git remote -v
+```
+
+Esto muestra a qué repositorio remoto está conectado.
+
+```bash
+git config --list
+```
+
+Muestra toda la configuración de Git.
+
+```bash
+git config user.name "Mi Nombre"
+git config user.email "miemail@gmail.com"
+```
+
+Esto sirve para configurar mi nombre y correo, que salen en los commits.
+
+---
+
+Con esto ya entiendo mejor cómo trabajar con ramas y merges en Git.
+
