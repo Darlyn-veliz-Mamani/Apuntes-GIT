@@ -28,7 +28,7 @@ git config --global user.email "adriana88@gmail.com"
 
  asi usas tu nombre de tu correo y tu correo  de github  eso basicamente  en resumen
  
-#//////--------///////----------//////----------////////--------/////////-----#
+----------------------------------------
 
 #clase 2 
 
@@ -224,3 +224,130 @@ Esto sirve para configurar mi nombre y correo, que salen en los commits.
 
 Con esto ya entiendo mejor cómo trabajar con ramas y merges en Git.
 
+#CLASE 7
+##PULL REQUEST Y TRABAJO COLABORATIVO CON GITHUB
+
+###¿QUÉ SON LOS PULL REQUEST?
+
+Los Pull Request, también llamados PR, son la forma correcta y profesional de trabajar en equipo usando Git y GitHub.
+Un Pull Request es una solicitud que hago para unir el código de mi rama con el código principal del proyecto.
+
+La idea del PR es que el código NO se una directamente, sino que primero el equipo pueda revisar lo que hice, ver los cambios, comentar, aprobar o rechazar.
+Es como decir: “ya terminé mi parte, revisen antes de unirla”.
+
+#¿CÓMO SE CREA UN PULL REQUEST?
+
+Primero debo subir mi rama al repositorio remoto usando git push.
+Después de eso, el Pull Request ya no se crea desde la terminal, sino desde la página de GitHub.
+
+En GitHub:
+
+Entro al repositorio
+GitHub detecta la nueva rama
+Creo el Pull Request siguiendo los pasos
+Indico qué rama quiero unir y a cuál
+
+FLUJO DE TRABAJO USANDO PULL REQUEST
+
+Primero me aseguro de que la rama develop esté actualizada
+
+git checkout develop
+git fetch
+git pull origin develop
+
+Esto sirve para trabajar siempre con la versión más reciente del proyecto.
+
+Me cambio a mi rama de trabajo
+
+git checkout rama
+
+Si la rama no existe, la creo con:
+
+git checkout -b rama
+
+Actualizo mi rama con los cambios de develop (solo si hubo cambios)
+
+git merge develop
+
+Esto evita conflictos más adelante.
+
+Trabajo normalmente en mi código
+
+Aquí edito archivos, agrego funcionalidades y hago los cambios necesarios.
+
+Subo mis cambios al repositorio remoto
+
+git push origin rama
+
+Si es la primera vez que subo esa rama:
+
+git push -u origin rama
+
+Antes de crear el Pull Request, reviso otra vez develop
+
+git checkout develop
+git fetch
+git checkout rama
+git merge develop
+
+Esto asegura que mi rama esté actualizada antes del PR.
+
+Si hay conflictos
+
+Si Git muestra conflictos:
+
+Entro a los archivos
+Corrijo manualmente
+Guardo los cambios
+
+Luego:
+
+git add .
+git commit
+
+Si uso nano para guardar:
+Ctrl + O, Enter, Ctrl + X
+
+Después:
+
+git push origin rama
+
+Ahora sí, creo el Pull Request en GitHub.
+
+#¿POR QUÉ USAMOS PULL REQUEST SI SE PUEDE TRABAJAR SIN ELLOS?
+
+Aunque Git permite trabajar sin Pull Request, no es seguro hacerlo en equipo.
+
+Sin PR:
+
+Cualquiera puede unir código sin avisar
+Se pueden subir errores graves
+No se revisa el código
+Puede entrar código mal hecho o malicioso
+
+Los Pull Request obligan a:
+
+Revisar los cambios
+Discutir mejoras
+Aprobar antes de unir
+Mantener el proyecto ordenado y seguro
+
+#¿CÓMO PROTEGER EL REPOSITORIO Y LIMITAR LA COLABORACIÓN?
+
+Usar PR no es suficiente si no se configuran permisos.
+
+#GitHub permite:
+
+Bloquear merges directos a develop o main
+Obligar a usar Pull Request
+Exigir revisiones antes de aprobar cambios
+
+Esto protege el repositorio y evita errores.
+
+#¿CÓMO COLABORAR SI NO SOY COLABORADOR INVITADO?
+
+Aunque no esté invitado directamente al repositorio, sí puedo colaborar usando:
+
+Fork del repositorio
+Trabajo en mi propio repositorio
+Pull Request al repositorio original
