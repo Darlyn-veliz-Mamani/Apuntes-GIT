@@ -1,353 +1,297 @@
-#README 
-#TRABAJO INDIVIDUAL-DIA1-
+<table>
+  <tr>
+    <td width="160" valign="middle">
+      <img src="img/logo.png" width="160" alt="Logo de Git" />
+    </td>
+    <td valign="middle">
+           <h1 align="left">📘 Apuntes de Git</h1>
+           <h3 align="left">🚀 Ingeniería de Sistemas</h3>
+    </td>
+  </tr>
+</table>
 
-- Nombre: Darlyn Alejandra veliz Mamani
-- NroCel: 77433898
-- Correo: darlinalejandra87@gmail.com
-
-##Clase1
-# que es GIT ?
-
-bueno git es un controlador de versiones  eso se podria decir en resumen 
-
-## Como nacio GIT ?
-
-bueno git basicamente nacio en abril de 2005  fue creado por linus torvalds
-en si git nacio por qeu  pues  su creador se enojo por que   habian cosas inefficientes y se puso a crear git 
-
-### Como instalar GIT ?
-
-- primero  se debe ir ala pagina oficial de git para descargarlo una vez descargado para 
-tu sistema operativo que tengas  
-lo instalas  despues  abres ya tu gitbash  y lo configuras con los siguientes comandos
-
-
-git config --global user.name "Adriana"
-
-git config --global user.email "adriana88@gmail.com" 
-
- asi usas tu nombre de tu correo y tu correo  de github  eso basicamente  en resumen
- 
-----------------------------------------
-
-#clase 2 
-
-continuando  aprendiendo git 
-- continuando en la clase de hoy se avanzo lo siguiente
-
-### comandos para guardar y para restaurar un archivo en git 
-
-el comando  git add . que guarda todos los cambios que realizaste  despues de modificar
- un archivo o crearlo desde cero 
-
-tambien se hablo de como modificar un archivo y como se muestra cuando lo modificas
- lo guardas y lo borras y ,despues lo restauras  con el comando 
- 
-git restore nombre del archivo 
- tambien s ehablo del comando del  git reset 
--tambien se hablo de buenas practicas de como hacer  commits correctamente
--tamnbien  otras buenas practicas  como hacer commits en ingles  basicamente
- eso  se iso en la clase2 
-
--#-------#-----------#-----------#----------------#-----------#------------------#-----------------#------------
-## Clase 3 
-
-# como crear cuenta en github
-
--primero busco  en el buscador git hub  y se registro con una cuenta normal 
-una vez registrado ya y verificado  configurarlo poner el nombreque se vera en
- los commits
- que aras y los cambios que subiras a los repositorios
- con los cuales trabajaras  
-
-## como crear un repositorio en github  
-- primero entro  a Github y hago login  con mi cuenta 
-- luego busco el boton  que dice (New o nuevo  repositorio) 
-- escribo el nombre de mi repositorio por ejemplo (nuevo proyecto )
-- puedo agregare una descripcion corta opcional 
--  elijo  si quiero que sea publico o  privado 
-- marco la opcion de README  si quiero que se cree un archivo inicial 
--  finalmente ago clik en crear el repositorio 
-### comandos basicos de git crear ramas subir cambios clonar repsoitorio 
-- basicamente  explico como  crear uan rama con el siguiente comando ejemplo 
-git checkout -b nueva-funcion
-- despues como clonar el repositorio con 
-git clone enlace del repositorio
-- tambien como  sunnbir cambios despues de hacer commit  para subir cambios ala rama 
-git push 
-y git pull para traer los cambios de develop a tu rama 
-basicamente eso 
-## clase 5
-#Bifurcaciones (ramas) en Git – mis apuntes
-- En Git, una bifurcación o rama es cuando el proyecto se divide en otro camino para poder trabajar sin afectar el principal.
-Sirve para probar cosas nuevas, hacer cambios o avanzar en una parte del trabajo sin arruinar lo que ya funciona.
-
-La rama principal se llama main y ahí va el proyecto que ya está listo o en producción.
-La rama develop se usa para ir probando los cambios antes de pasarlos a main, por eso se considera pre-producción.
-
-Para crear una rama puedo usar git branch, que solo crea la rama, pero no me cambia a ella.
-Si quiero crear la rama y cambiarme de una vez, uso git checkout -b.
-
-Para moverme entre ramas puedo usar git checkout, que es el comando clásico, o git switch
- que es más nuevo y solo sirve para cambiar de rama.
-
-Cuando ya terminé de usar una rama y no la necesito más, la puedo borrar con git branch -d.
-
-En clase vimos que es mejor trabajar en develop, hacer los cambios ahí con el editor de código 
-(como Visual Studio Code, NetBeans o BlueJ), y cuando todo está bien, unirlo a main.
-
-Este modo de trabajar se conoce como Git Flow, y ayuda a tener el proyecto ordenado y sin errores.
-##Clase 6
- 
-### Apuntes de Git (ramas, merge y comandos)
-
-Hoy vimos cómo trabajar mejor con ramas en Git, especialmente usando `main` y `develop`.
-
-Primero entendí que:
-
-* **main** es la rama principal donde debe estar todo ya funcionando bien (como versión final)
-* **develop** es donde se va trabajando y probando antes de pasar a main
-
-O sea, no se trabaja directo en main, todo pasa primero por develop.
+| 📬 **Contacto** | |
+| --- | --- |
+| **Nombre** | Darlyn Alejandra Veliz Mamani |
+| **Celular** | 77433898 |
+| **Correo** | darlinalejandra87@gmail.com |
 
 ---
 
-Después vimos un comando para ver los commits:
+# 📚 Resumen de clases
 
+## 📖 Clase 1 – Introducción a Git
+
+### ❓ ¿Qué es Git?
+Git es un sistema de control de versiones que guarda el historial de tus archivos y te permite trabajar con ramas sin perder cambios.
+
+### 💡 ¿Por qué usar Git?
+| Ventaja | Descripción |
+| --- | --- |
+| Control de versiones | Guarda el historial y te permite volver atrás. |
+| Seguridad | Evita perder trabajo importante. |
+| Trabajo en equipo | Permite colaborar sin sobrescribir cambios ajenos. |
+
+### Instalar y configurar Git
+```bash
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+```
+
+---
+
+## 📝 Clase 2 – Guardar y restaurar cambios
+
+### 🧩 Comandos básicos
+| Comando | Qué hace |
+| --- | --- |
+| `git add .` | Prepara todos los cambios para el siguiente commit |
+| `git restore <archivo>` | Restaura un archivo al estado anterior |
+| `git reset` | Quita cambios de la zona de preparación (staging) |
+
+### ✨ Buenas prácticas de commits
+- Usa mensajes claros, precisos y descriptivos.
+- Si trabajas en equipo, escribe commits en inglés.
+- Divide los cambios en commits pequeños y coherentes.
+
+---
+
+## 🌐 Clase 3 – Crear cuenta y repositorio en GitHub
+
+### Crear una cuenta en GitHub
+- Busca GitHub en el navegador.
+- Regístrate con una cuenta normal.
+- Configura tu nombre y correo.
+
+### Crear un repositorio nuevo
+- Inicia sesión en GitHub.
+- Haz clic en "New" o "Nuevo repositorio".
+- Escribe el nombre del repo.
+- Agrega una descripción opcional.
+- Elige público o privado.
+- Activa la opción de README si quieres iniciar con un archivo.
+- Haz clic en "Create repository".
+
+### Comandos básicos de Git
+- Crear y cambiar de rama: `git checkout -b nueva-funcion`
+- Clonar un repositorio: `git clone <url-del-repositorio>`
+- Subir cambios: `git push`
+- Traer cambios: `git pull`
+
+---
+
+## 📘 Clase 4 – Git Remote, SSH y manejo de múltiples cuentas
+
+### 📌 Evidencia y justificación
+
+<table>
+  <tr>
+    <td width="55%" valign="top">
+      **Justificación**  
+      No pude asistir a la clase ese día por motivo de examen de la materia de Ingeniería de Software, por lo cual adjunto la imagen del examen en Moodle. También después teníamos una reunión para revisión con QAs sobre el sprint 2.
+    </td>
+    <td width="45%" valign="top">
+      <img src="img/image.png" width="100%" alt="Evidencia Clase 4" />
+    </td>
+  </tr>
+</table>
+
+### ✍️ Apuntes de la clase 4
+En esta clase aprendí cómo conectar mi repositorio local con GitHub y cómo manejar esas conexiones, especialmente cuando tengo más de una cuenta.
+
+#### 🔧 Git Remote
+- `git remote` permite gestionar las conexiones con repositorios remotos.
+- Con esto le digo a mi Git local a dónde enviar los cambios o de dónde traerlos.
+
+#### ✅ Comandos importantes de `git remote`
+- `git remote -v` — muestra la URL a la que está conectado el repositorio.
+- `git remote add origin "URL"` — vincula el repositorio local con uno remoto.
+- `git remote set-url origin "URL"` — cambia la URL remota del repositorio.
+
+#### 🔐 SSH y llaves
+SSH es la conexión segura que evita usar usuario y contraseña todo el tiempo. Funciona con llaves que se generan en mi equipo.
+
+- Una llave SSH es una clave única que se guarda en mi computadora.
+- GitHub guarda la copia pública y reconoce mi equipo automáticamente.
+
+#### 🌍 Múltiples cuentas en GitHub
+Cuando tengo más de una cuenta, Git puede confundirse si no uso llaves diferentes.
+- Cada cuenta debe tener su propia llave SSH.
+- Se usa un archivo `config` para decirle a Git qué llave usar según el proyecto.
+
+### 🧩 Ejemplos de comandos
+| Comando | Uso | Comando | Uso |
+| --- | --- | --- | --- |
+| `git remote -v` | Ver URLs remotas | `ssh -T git@github.com` | Probar conexión SSH estándar |
+| `git remote add origin "URL"` | Conectar repo local a remoto | `ssh -T git@github-personal` | Probar conexión SSH personalizada |
+| `git remote set-url origin "URL"` | Cambiar URL remota | `ssh-keygen -t ed25519 -C "correo"` | Generar llave SSH |
+| `ssh-keygen -t ed25519 -C "correo" -f ~/.ssh/id-auxi` | Generar llave para otra cuenta | `touch config` | Crear archivo `config` para múltiples cuentas |
+
+---
+
+## 🌿 Clase 5 – Ramas en Git
+
+### ¿Qué es una rama?
+Una rama es un camino independiente para trabajar sin afectar el principal.
+
+### Ramas principales
+- `main`: rama principal y estable.
+- `develop`: rama de desarrollo y pruebas antes de pasar a `main`.
+
+### Trabajar con ramas
+- Crear una rama: `git branch <nombre-rama>`.
+- Crear y cambiar de rama: `git checkout -b <nombre-rama>`.
+- Cambiar de rama: `git checkout <nombre-rama>` o `git switch <nombre-rama>`.
+- Eliminar una rama: `git branch -d <nombre-rama>`.
+
+### Flujo recomendado
+1. Trabaja en `develop` o en una rama nueva.
+2. Prueba los cambios.
+3. Cuando estén listos, únelos a la rama principal con `merge`.
+
+---
+
+## 🔀 Clase 6 – Merge, historial y conflictos
+
+### Historias de commits
+Ver el historial en forma de gráfico:
 ```bash
 git log --graph --oneline --all
 ```
 
-Esto sirve para ver todo el historial pero de forma más clara.
-Muestra como un dibujo de las ramas, los commits en una sola línea 
-y todo lo que hay en el proyecto.
-Me ayuda a entender cómo se unieron las ramas y qué cambios hubo.
+### Merge (fusionar ramas)
+Merge significa unir el trabajo de una rama a otra.
 
----
-
-Luego empezamos con el **merge**.
-
-El profe dijo que merge significa **fusionar**, o sea unir ramas.
-Sirve para juntar los cambios de una rama con otra.
-
----
-
-Para hacer merge primero hizo esto:
-
+Ejemplo:
 ```bash
 git checkout develop
-```
-
-Con esto se cambia a la rama develop.
-
-Luego dijo que **ANTES de trabajar o subir cambios siempre hay que hacer esto**:
-
-```bash
-git fetch
-```
-
-Esto trae los cambios del repositorio remoto pero no los mezcla todavía.
-
-Después:
-
-```bash
-git pull origin develop
-```
-
-Esto ya trae los cambios y los mezcla con mi rama develop local.
-O sea, con esto ya estoy actualizado.
-
----
-
-Después de eso ya se puede hacer merge de otra rama, algo así:
-
-```bash
 git merge nombre-rama
 ```
 
-Esto lo que hace es juntar los cambios de esa rama con develop.
-
----
-
-También vimos cómo borrar una rama:
-
+### Actualizar antes de trabajar
 ```bash
-git branch -D nombre-rama
-```
-
-Sirve para eliminar ramas que ya no se necesitan.
-
----
-
-Luego hablamos de los **conflictos**.
-
-Esto pasa cuando dos ramas modifican lo mismo.
-Entonces Git no sabe cuál cambio dejar.
-
-Para arreglarlo:
-
-1. Se editan los archivos manualmente
-2. Se guarda lo correcto
-3. Luego:
-
-```bash
-git add .
-git commit
-```
-
-El commit puede hacerse sin mensaje, Git abre uno automático.
-
----
-
-También vimos algunos comandos útiles:
-
-```bash
-git remote -v
-```
-
-Esto muestra a qué repositorio remoto está conectado.
-
-```bash
-git config --list
-```
-
-Muestra toda la configuración de Git.
-
-```bash
-git config user.name "Mi Nombre"
-git config user.email "miemail@gmail.com"
-```
-
-Esto sirve para configurar mi nombre y correo, que salen en los commits.
-
----
-
-Con esto ya entiendo mejor cómo trabajar con ramas y merges en Git.
-
-#CLASE 7
-##PULL REQUEST Y TRABAJO COLABORATIVO CON GITHUB
-
-###¿QUÉ SON LOS PULL REQUEST?
-
-Los Pull Request, también llamados PR, son la forma correcta y profesional de trabajar en equipo usando Git y GitHub.
-Un Pull Request es una solicitud que hago para unir el código de mi rama con el código principal del proyecto.
-
-La idea del PR es que el código NO se una directamente, sino que primero el equipo pueda revisar lo que hice, ver los cambios, comentar, aprobar o rechazar.
-Es como decir: “ya terminé mi parte, revisen antes de unirla”.
-
-#¿CÓMO SE CREA UN PULL REQUEST?
-
-Primero debo subir mi rama al repositorio remoto usando git push.
-Después de eso, el Pull Request ya no se crea desde la terminal, sino desde la página de GitHub.
-
-En GitHub:
-
-Entro al repositorio
-GitHub detecta la nueva rama
-Creo el Pull Request siguiendo los pasos
-Indico qué rama quiero unir y a cuál
-
-FLUJO DE TRABAJO USANDO PULL REQUEST
-
-Primero me aseguro de que la rama develop esté actualizada
-
-git checkout develop
 git fetch
 git pull origin develop
+```
 
-Esto sirve para trabajar siempre con la versión más reciente del proyecto.
-
-Me cambio a mi rama de trabajo
-
-git checkout rama
-
-Si la rama no existe, la creo con:
-
-git checkout -b rama
-
-Actualizo mi rama con los cambios de develop (solo si hubo cambios)
-
-git merge develop
-
-Esto evita conflictos más adelante.
-
-Trabajo normalmente en mi código
-
-Aquí edito archivos, agrego funcionalidades y hago los cambios necesarios.
-
-Subo mis cambios al repositorio remoto
-
-git push origin rama
-
-Si es la primera vez que subo esa rama:
-
-git push -u origin rama
-
-Antes de crear el Pull Request, reviso otra vez develop
-
-git checkout develop
-git fetch
-git checkout rama
-git merge develop
-
-Esto asegura que mi rama esté actualizada antes del PR.
-
-Si hay conflictos
-
-Si Git muestra conflictos:
-
-Entro a los archivos
-Corrijo manualmente
-Guardo los cambios
-
-Luego:
-
+### Resolver conflictos
+1. Edita los archivos con conflicto.
+2. Guarda los cambios.
+3. Prepara y crea el commit:
+```bash
 git add .
 git commit
+```
 
-Si uso nano para guardar:
-Ctrl + O, Enter, Ctrl + X
+### Comandos útiles
+- `git remote -v` : muestra los repositorios remotos.
+- `git config --list` : muestra la configuración de Git.
+- `git config user.name "Mi Nombre"`
+- `git config user.email "miemail@gmail.com"`
 
-Después:
+---
 
-git push origin rama
+## 🚀 Clase 7 – Pull Request y trabajo colaborativo
 
-Ahora sí, creo el Pull Request en GitHub.
+### ¿Qué es un Pull Request?
+Un Pull Request (PR) es una solicitud para unir el código de tu rama al proyecto principal. Sirve para que el equipo revise y apruebe antes de fusionar.
 
-#¿POR QUÉ USAMOS PULL REQUEST SI SE PUEDE TRABAJAR SIN ELLOS?
+### Ventajas del Pull Request
+- Revisión de código.
+- Comentarios y discusión.
+- Menos errores al unir cambios.
+- Control y seguridad en el proyecto.
 
-Aunque Git permite trabajar sin Pull Request, no es seguro hacerlo en equipo.
+### Cómo crear un Pull Request
+1. Sube tu rama al repositorio remoto:
+```bash
+git push origin <rama>
+```
+2. En GitHub, selecciona la rama.
+3. Crea el Pull Request indicando de dónde a dónde se fusiona.
 
-Sin PR:
+### Flujo recomendado
+1. `git checkout develop`
+2. `git fetch`
+3. `git pull origin develop`
+4. `git checkout -b <rama>` o `git checkout <rama>`
+5. Trabaja y guarda cambios.
+6. `git push origin <rama>`
+7. Si es la primera vez: `git push -u origin <rama>`
+8. Actualiza tu rama si hubo cambios en `develop`:
+```bash
+git checkout develop
+git fetch
+git checkout <rama>
+git merge develop
+```
+9. Si hay conflictos, resuélvelos, luego `git push origin <rama>`.
 
-Cualquiera puede unir código sin avisar
-Se pueden subir errores graves
-No se revisa el código
-Puede entrar código mal hecho o malicioso
+---
 
-Los Pull Request obligan a:
 
-Revisar los cambios
-Discutir mejoras
-Aprobar antes de unir
-Mantener el proyecto ordenado y seguro
+## 🌟 Última clase – Apunte final
 
-#¿CÓMO PROTEGER EL REPOSITORIO Y LIMITAR LA COLABORACIÓN?
+### 📍 Lo que aprendimos
+En la última clase repasamos el flujo completo de trabajo con GitHub, reforzamos el uso de Pull Requests y revisamos buenas prácticas para mantener el repositorio seguro y organizado.
 
-Usar PR no es suficiente si no se configuran permisos.
+### 🧩 Puntos más importantes
+- Confirmar siempre que la rama `develop` esté actualizada antes de trabajar.
+- Usar Pull Requests para revisar cambios antes de unirlos.
+- Mantener ramas limpias y eliminar las que ya no se usan.
+- Probar las conexiones SSH y asegurar varias cuentas si las necesitas.
 
-#GitHub permite:
+### 📦 Comandos y ejemplos
+<table>
+  <tr>
+    <td width="48%" style="border: 2px solid #4CAF50; border-radius: 12px; padding: 14px; vertical-align: top;">
+      <strong>Trabajo con ramas</strong>
+      <pre><code>git checkout -b nueva-rama
+git checkout develop
+git merge nueva-rama</code></pre>
+    </td>
+    <td width="48%" style="border: 2px solid #4CAF50; border-radius: 12px; padding: 14px; vertical-align: top;">
+      <strong>Pull Request</strong>
+      <pre><code>git push origin nueva-rama
+git pull origin develop
+git push -u origin nueva-rama</code></pre>
+    </td>
+  </tr>
+  <tr>
+    <td width="48%" style="border: 2px solid #4CAF50; border-radius: 12px; padding: 14px; vertical-align: top;">
+      <strong>SSH y seguridad</strong>
+      <pre><code>ssh-keygen -t ed25519 -C "correo"
+ssh -T git@github.com
+ssh -T git@github-personal</code></pre>
+    </td>
+    <td width="48%" style="border: 2px solid #4CAF50; border-radius: 12px; padding: 14px; vertical-align: top;">
+      <strong>Configuración de remoto</strong>
+      <pre><code>git remote -v
+git remote add origin "URL"
+git remote set-url origin "URL"</code></pre>
+    </td>
+  </tr>
+</table>
 
-Bloquear merges directos a develop o main
-Obligar a usar Pull Request
-Exigir revisiones antes de aprobar cambios
+---
 
-Esto protege el repositorio y evita errores.
+## 🔐 Proteger el repositorio
 
-#¿CÓMO COLABORAR SI NO SOY COLABORADOR INVITADO?
+Para mantener el repositorio seguro y ordenado, GitHub permite:
+- Bloquear merges directos a `develop` o `main`.
+- Obligar a usar Pull Requests.
+- Exigir revisiones antes de aprobar cambios.
 
-Aunque no esté invitado directamente al repositorio, sí puedo colaborar usando:
+Esto ayuda a evitar errores y a que el código pase por revisión antes de unirse.
 
-Fork del repositorio
-Trabajo en mi propio repositorio
-Pull Request al repositorio original
+---
+
+## 🙋‍♂️ ¿Cómo colaborar si no soy colaborador invitado?
+
+Aunque no estés invitado directamente, puedes contribuir así:
+- Hacer un fork del repositorio.
+- Trabajar en tu propio repositorio.
+- Enviar un Pull Request al repositorio original.
+
+---
+
